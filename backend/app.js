@@ -2,10 +2,11 @@ const express = require("express")
 const cors = require("cors")
 const app = express()
 const port = 3000
-app.use(cors())
 
+
+app.use(cors())
 app.use(express.json())
 
-
-
-module.exports = app;
+app.listen(port, function(){
+    console.log("Server working on port 3000")
+})
